@@ -22,8 +22,8 @@ public class RenderHandler
 		pixels = ((DataBufferInt) view.getRaster().getDataBuffer()).getData();
 		
 		camera = new Rectangle(0,0, width, height);
-		camera.x = -100;
-		camera.y = -30;
+		camera.x = 0;
+		camera.y = 0;
 			
 	}
 	//Renders the array of pixels to the screen.
@@ -46,7 +46,7 @@ public class RenderHandler
 		}
 	}
 		
-	//Prevents crashing if zoomed image is off the screen.
+	//Prevents crashing if zoomed image is off the screen. 
 	private void setPixel(int pixel, int x, int y)
 	{
 		if(x >= camera.x && y >= camera.y && x <= camera.x + camera.w && y <= camera.y + camera.h) 
